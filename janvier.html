@@ -1,0 +1,734 @@
+<!DOCTYPE html><html lang="en"><head>
+  
+    <meta charset="UTF-8">
+    <title>Calendrier de ma Chérie</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+<link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css"><link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"><link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.10.0/css/mdb.min.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/core.css">
+<link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="css/core.css">
+<style>
+
+.calendar {
+	background-image: url('photofond.jpeg'); /*image de fond du calendrier*/
+	background-size: cover;
+	background-position: center;
+	height: 600px;
+	width: 800px;
+	margin: 40px auto 0 auto;
+	box-shadow: 4px 5px 11px #000000;
+	border-radius: 5px;
+}
+
+.w3-bar{
+  /* https://codepen.io/cheeriottis/pen/inluv */
+  width: 50%;
+  padding: 50px;
+}
+
+.animate
+{
+  transition: all 0.1s;
+  -webkit-transition: all 0.1s;
+}
+
+.action-button
+{
+  position: relative;
+  padding: 10px 40px;
+  margin: 0px 10px 10px 0px;
+  float: left;
+  border-radius: 10px;
+  font-family: 'Pacifico', cursive;
+  font-size: 25px;
+  color: #FFF;
+  text-decoration: none;  
+}
+
+.blue
+{
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9;
+}
+
+.red
+{
+  background-color: #E74C3C;
+  border-bottom: 5px solid #BD3E31;
+  text-shadow: 0px -2px #BD3E31;
+}
+
+.green
+{
+  background-color: #82BF56;
+  border-bottom: 5px solid #669644;
+  text-shadow: 0px -2px #669644;
+}
+
+.yellow
+{
+  background-color: #F2CF66;
+  border-bottom: 5px solid #D1B358;
+  text-shadow: 0px -2px #D1B358;
+}
+
+.action-button:active
+{
+  transform: translate(0px,5px);
+  -webkit-transform: translate(0px,5px);
+  border-bottom: 1px solid;
+}
+
+.box {
+	height: 80px;
+	width: 80px;
+	border: 2px solid white;
+	color: white;
+	margin: 57px auto 0 auto;
+	font-size: 20px;
+	font-weight: bold;
+	padding-left: 5px;
+}
+
+.box:hover {
+	color: rgb(193, 193, 193);
+	border-color: rgb(193, 193, 193);
+}
+
+.task {
+	background-image: url('https://cdn.pixabay.com/photo/2014/04/30/00/37/border-334674_960_720.png'); /* image de fond pour chaque case*/
+	background-size: 710px 500px;
+	border-radius: 5px;
+	height: 500px;
+	width: 710px;
+	margin-top: 57px;
+	margin-left: 45px;
+	background-color: white;
+	position: absolute;
+	animation: show 1s;
+	text-align: center;
+	padding: 40px 50px 50px 50px;
+	color: #393737;
+	font-family: "Times New Roman", Times, serif;
+	font-size: 20px;
+}
+
+@keyframes show {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+a {
+	color: rgb(0, 155, 75);
+}
+
+a:hover {
+	color: rgb(0, 213, 103);
+}</style></head>
+
+<body>
+
+
+
+<div class="jumbotron text-center" style="margin-bottom:0; background-color: #E74C3C; color: white;">
+    <h1>Une petite routine chaque jour pour ma Emma d'amour</h1>
+    <h2>Voici un calendrier où tu trouveras chaque jour des petits trucs mignons </h2>
+    <p>gros bisous et bonne fin de mois de Janvier</p>
+</div>
+
+ 
+
+  <div class="w3-bar" style ="display: block;
+  margin : auto;">
+
+ <a href="#" class="action-button shadow animate red">Janv</a>
+  <a href="fevrier.html" class="action-button shadow animate blue">Fév</a>
+  <a href="mars.html" class="action-button shadow animate green">Mars</a>
+  <a href="avril.html" class="action-button shadow animate yellow">Avril</a>
+
+
+</div>
+
+
+
+ <div class="calendar">
+
+    <div id="bg-task" class="task" style="display: none;">
+
+      <div id="a" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Listen to Christmas music.</p>
+
+        <iframe width="430" height="245" src="https://www.youtube.com/embed/6EOZwVCtoWk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+
+
+      <div id="b" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Do a <a href="https://www.lifehack.org/344891/12-good-deeds-you-can-this-christmas" target="_blank">good deed</a>
+          for example:</p>
+
+        <ul style="text-align: left;">
+          <li>give your change to the homeless</li>
+          <li>pick up trash in the park or at the beach</li>
+          <li>give your time</li>
+          <li>participate in an online Christmas auction</li>
+          <li>find unneeded items in your house and donate <br>them to a charitable organization</li>
+        </ul>
+
+        <img height="140px" width="140px" style="float: right; margin: -90px auto 0 0" src="https://www.yeahlifestyle.com/wp-content/uploads/2018/10/Business-Ideas-People-who-Love-Helping-Others-hands-1440x1440.png">
+      </div>
+
+
+      <div id="c" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Aujourd'hui le rêve américain commence</h1>
+
+        <p style="margin: 10px auto 20px auto;"> Rêve bien du coup, ne rate pas tes avions et n'attrape pas le covid<a href="https://www.bonappetit.com/recipe/bas-best-hot-chocolate" target="_blank">(gros bisous et repose toi dans l'avion) </a>.</p>
+
+        <img width="430" height="245" src="https://cdn.futura-sciences.com/buildsv6/images/wide1920/5/d/3/5d3c0362c7_116006_avion-vol-paris-new-york.jpg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940">
+      </div>
+
+
+      <div id="d" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Go for an afternoon walk.</p>
+
+        <img height="245" width="430" src="https://images.pexels.com/photos/730256/pexels-photo-730256.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940">
+
+      </div>
+
+
+      <div id="e" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Make a list with things you have <a href="https://kelleynan.com/holiday-prep-christmas-to-do-list/" target="_blank">to do</a> before Christmas.
+        </p>
+
+        <img src="https://i.pinimg.com/originals/1c/1f/b8/1c1fb81b8a7790c6d28b7ca7c226b054.jpg" height="280">
+      </div>
+
+
+      <div id="f" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Go present shopping. The sooner the better.</p>
+
+        <img height="245" width="430" src="https://images.pexels.com/photos/749353/pexels-photo-749353.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940">
+
+      </div>
+
+
+      <div id="g" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Watch <a href="https://www.esquire.com/entertainment/movies/a50565/best-christmas-movies-of-all-time/" target="_blank">Christmas movie</a>.</p>
+
+        <img height="245" width="430" src="https://sm.ign.com/t/ign_pl/image/e/everything/everything-coming-to-the-disney-streaming-service-so-far_w8mf.1280.jpg">
+
+      </div>
+
+      <div id="h" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Have a Christmas karaoke.</p>
+
+        <iframe width="430" height="245" src="https://www.youtube.com/embed/wsB1_UGiVoU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+
+      <div id="i" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Read a <a href="https://www.goodreads.com/list/tag/christmas" target="_blank">Christmas book</a>.</p>
+
+        <img src="https://almabooks.com/wp-content/uploads/2016/10/9781847496171.jpg" height="260">
+
+      </div>
+
+      <div id="j" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Make <a href="https://pl.pinterest.com/sburr1234/homemade-christmas-cards/" target="_blank">Christmas cards</a>.</p>
+
+        <img src="http://cdn.shopify.com/s/files/1/1531/4421/products/Little_Tree_Boxed_Christmas_Cards_600x600.jpg?v=1541543705" height="260">
+
+      </div>
+
+      <div id="k" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Eat dinner by candlelight.</p>
+
+        <img src="https://cdn.getyourguide.com/img/tour_img-1773237-146.jpg" height="245">
+
+      </div>
+
+      <div id="l" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Bake <a href="https://www.bbc.co.uk/food/recipes/christmasbiscuits_93733" target="_blank">Christmas biscuits</a>.
+        </p>
+
+        <img src="https://food-images.files.bbci.co.uk/food/recipes/christmasbiscuits_93733_16x9.jpg" height="245">
+
+      </div>
+
+      <div id="m" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Write letter to Santa</p>
+
+        <img src="https://i.pinimg.com/originals/89/3f/71/893f712090cf6f9e43676586e560ceca.jpg" height="245">
+
+      </div>
+
+      <div id="n" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Decorate the Christmas tree.</p>
+
+        <img src="https://images.pexels.com/photos/257909/pexels-photo-257909.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=650&amp;w=940" height="245">
+
+      </div>
+
+      <div id="o" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Make <a href="https://www.thespruceeats.com/marshmallow-snowmen-521048" target="_blank">marshmallow snowmen</a>.</p>
+
+        <img src="https://www.thespruceeats.com/thmb/teaIWO6Wk4oWnXlq7xnfz0NXRgo=/960x0/filters:no_upscale():max_bytes(150000):strip_icc()/marshmallow-snowmen-521048-hero-01-6140f1ff428147faaf205182db9f95c4.jpg" height="245">
+
+      </div>
+
+      <div id="p" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Go ice skating.</p>
+
+        <img src="https://warsawnow.pl/wp-content/uploads/2017/12/lodowisko-678x381.jpg" height="245">
+
+      </div>
+
+      <div id="r" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Make a <a href="https://www.thespruceeats.com/gingerbread-house-dough-recipe-1136139" target="_blank">gingerbread
+            house</a>.</p>
+
+        <img src="https://www.inossining.com/wp-content/uploads/2018/12/Gingerbread-House-DIY.png" height="245">
+
+      </div>
+
+      <div id="s" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Write out Christmas cards.</p>
+
+        <img src="https://www.penny-black.co.uk/img/product/applique-golden-tree-christmas-card-18013804-600.jpg" height="245">
+
+      </div>
+
+      <div id="t" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Visit Santa Claus.</p>
+
+        <img src="https://s.yimg.com/ny/api/res/1.2/iVURdo2B1fYDA5.3Q.j09Q--~A/YXBwaWQ9aGlnaGxhbmRlcjtzbT0xO3c9ODAw/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-images/2019-12/e9bf5910-1442-11ea-bafe-d302d40331d3" height="245">
+
+      </div>
+
+      <div id="u" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Listen to Christmas carol.</p>
+
+        <iframe width="430" height="245" src="https://www.youtube.com/embed/PrFCdi7apV8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+      </div>
+
+      <div id="w" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Do some present wrapping.</p>
+
+        <img src="https://cdn-az.allevents.in/events5/banners/ad00b7d662a1c4b5fc3a6d1b142d1cca689e5c6538d9640e16282e29be088cde-rimg-w1200-h675-gmir.jpg?v=1575283971" height="245">
+
+      </div>
+
+      <div id="x" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">It&apos;s time for Christmas baking!</p>
+
+        <img src="https://img.etimg.com/thumb/msid-67161460,width-643,imgsize-1239644,resizemode-4/christmas-cooking-baking-food-eat-cookies-gettyimages-954428558.jpg" height="245">
+
+      </div>
+
+      <div id="y" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Clean the house.</p>
+
+        <img src="https://static.onecms.io/wp-content/uploads/sites/38/2015/05/04163136/PAR1119_SPEED_P57_SR100216_Parents-1536-S.jpg" height="245">
+
+      </div>
+
+      <div id="z" style="display: none">
+        <h1 style="font-size: 50px; color: red; font-weight: bold; margin-top: 10px;">Today&apos;s task:</h1>
+
+        <p style="margin: 10px auto 20px auto;">Eat Christmas dinner.</p>
+
+        <img src="https://t3.ftcdn.net/jpg/03/00/89/86/240_F_300898616_Z0dY9LFJ7U6spIkVrzeDRBRvZuCNH9ih.jpg" height="245">
+
+      </div>
+
+    </div>
+
+
+    <div class="row">
+
+      <div class="box" style="margin-left: 60px;" id="15">15.</div>
+
+      <div class="box" id="16">16.</div>
+
+      <div class="box" id="17">17.</div>
+
+      <div class="box" id="18">18.</div>
+
+      <div class="box" style="margin-right: 60px;" id="19">19.</div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="box" style="margin-left: 60px;" id="20">20.</div>
+
+      <div class="box" id="21">21.</div>
+
+      <div class="box" id="22">22.</div>
+
+      <div class="box" id="23">23.</div>
+
+      <div class="box" style="margin-right: 60px;" id="24">24.</div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="box" style="margin-left: 60px;" id="25">25.</div>
+
+      <div class="box" id="26">26.</div>
+
+      <div class="box" id="27">27.</div>
+
+      <div class="box" id="28">28.</div>
+
+      <div class="box" style="margin-right: 60px;" id="29">29.</div>
+
+    </div>
+
+        <div class="row">
+
+      <div class="box" style="margin-left: 60px;" id="30">30.</div>
+
+      <div class="box" style="margin-right: 60px;" id="31">31.</div>
+
+    </div>
+
+    
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script><script src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.10.0/js/mdb.min.js"></script><script>document.getElementById('bg-task').addEventListener("click", hide);
+
+    function hide() {
+      document.getElementById('bg-task').style.display = "none";
+      $('#bg-task>div').hide();
+    }
+
+    document.getElementById('15').addEventListener('click', a);
+
+    function a() {
+      let GivenDate = '2020-01-15';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('a').style.display = "block";
+      }
+    }
+
+
+    document.getElementById('16').addEventListener('click', b);
+
+    function b() {
+      let GivenDate = '2020-01-16';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert("Désolé mon coeur il va falloir attendre encore");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('b').style.display = "block";
+      }
+    }
+
+    document.getElementById('17').addEventListener('click', c);
+
+    function c() {
+      let GivenDate = '2019-12-03';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert("Désolé mon coeur il va falloir attendre encore");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('c').style.display = "block";
+      }
+    }
+
+    document.getElementById('18').addEventListener('click', d);
+
+    function d() {
+      let GivenDate = '2019-12-04';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('d').style.display = "block";
+      }
+    }
+
+    document.getElementById('19').addEventListener('click', e);
+
+    function e() {
+      let GivenDate = '2019-12-05';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('e').style.display = "block";
+      }
+    }
+
+    document.getElementById('20').addEventListener('click', f);
+
+    function f() {
+      let GivenDate = '2019-12-06';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('f').style.display = "block";
+      }
+    }
+
+    document.getElementById('21').addEventListener('click', g);
+
+    function g() {
+      let GivenDate = '2019-12-07';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('g').style.display = "block";
+      }
+    }
+
+    document.getElementById('22').addEventListener('click', h);
+
+    function h() {
+      let GivenDate = '2019-12-08';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('h').style.display = "block";
+      }
+    }
+
+    document.getElementById('23').addEventListener('click', i);
+
+    function i() {
+      let GivenDate = '2019-12-09';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('i').style.display = "block";
+      }
+    }
+
+    document.getElementById('24').addEventListener('click', j);
+
+    function j() {
+      let GivenDate = '2019-12-10';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('j').style.display = "block";
+      }
+    }
+
+    document.getElementById('25').addEventListener('click', k);
+
+    function k() {
+      let GivenDate = '2019-12-11';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('k').style.display = "block";
+      }
+    }
+
+    document.getElementById('26').addEventListener('click', l);
+
+    function l() {
+      let GivenDate = '2019-12-12';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('l').style.display = "block";
+      }
+    }
+
+    document.getElementById('27').addEventListener('click', m);
+
+    function m() {
+      let GivenDate = '2019-12-13';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('m').style.display = "block";
+      }
+    }
+
+    document.getElementById('28').addEventListener('click', n);
+
+    function n() {
+      let GivenDate = '2019-12-14';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('n').style.display = "block";
+      }
+    }
+
+    document.getElementById('29').addEventListener('click', o);
+
+    function o() {
+      let GivenDate = '2019-12-15';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('o').style.display = "block";
+      }
+    }
+
+    document.getElementById('30').addEventListener('click', p);
+
+    function p() {
+      let GivenDate = '2019-12-16';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('p').style.display = "block";
+      }
+    }
+
+    document.getElementById('31').addEventListener('click', r);
+
+    function r() {
+      let GivenDate = '2019-12-17';
+      let CurrentDate = new Date();
+      GivenDate = new Date(GivenDate);
+
+      if (GivenDate > CurrentDate) {
+        alert(" Désolé mon coeur il va falloir attendre encore un petit peu :) ");
+      }
+      else {
+        document.getElementById('bg-task').style.display = "block";
+        document.getElementById('r').style.display = "block";
+      }
+    }
+</script></body></html>
