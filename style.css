@@ -63,7 +63,7 @@ body:before {
 	color: #fff;
 	font-size: 16px;
 }
-.contact-form input[type=submit] {
+.contact-form input[type=button] {
 	height: 30px;
 	color: #fff;
 	font-size: 15px;
